@@ -1,0 +1,58 @@
+🧠 Proje Başlığı: Scrabble Oyuncu Derecesi Tahmini
+📌 Genel Bakış
+Bu proje, Kaggle platformundaki “Scrabble Player Rating” yarışmasına dayanmaktadır. Projenin amacı, Woogles.io platformunda oynanan yaklaşık 73.000 rekabetçi Scrabble maçından elde edilen verilerle, bir oyuncunun oyun öncesi derecesini (rating) sadece bir oyun üzerinden tahmin etmektir.
+
+Veri seti, insan oyuncuların ve çeşitli yapay zeka botlarının (BetterBot, STEEBot, HastyBot) karşı karşıya geldiği maç kayıtlarını içermektedir.
+
+
+🧾 Veri Seti Açıklaması
+train.csv: Her maç için özet bilgiler içerir:
+
+player_1_id, player_2_id
+
+player_1_score, player_2_score
+
+player_1_rating, player_2_rating (hedef değişken)
+
+winner_id, is_bot_match
+
+turns.csv: Her oyuncunun hamle düzeyinde verilerini içerir (hamle sayısı, alınan puan, kullanılan harfler)
+
+sample_submission.csv: Tahmin sonuçlarının formatı
+
+Ek olarak, SQL analizi için SQLite formatında veri seti de sunulmaktadır
+
+
+
+
+🎯 Proje Amacı
+Amacımız, bir oyuncunun sadece tek bir maç performansı kullanılarak oyun öncesi derecesini tahmin edebilecek güçlü bir regresyon modeli geliştirmektir. Zorluk, uzun dönem performansı yansıtan bu derecenin tek bir oyundan çıkarılacak verilerle öngörülmesindedir.
+
+
+
+⚙️ Önerilen Makine Öğrenimi Yöntemleri
+Regresyon modelleri: XGBoost, LightGBM, CatBoost
+
+Maç ve hamle düzeyinde özellik mühendisliği
+
+İsteğe bağlı olarak Bayesyen derecelendirme sistemleri (Glicko, ELO)
+
+Oyuncu bazlı istatistiklerin birleştirilmesi (yarışma kurallarına bağlı olarak)
+
+Yüksek kardinaliteli kategorik değişkenlerin yönetimi (örneğin, oyuncu kimlikleri)
+
+
+
+📈 Değerlendirme Metriği
+Root Mean Squared Error (RMSE): Gerçek dereceler ile tahminler arasındaki kare farkların ortalama karekökü
+
+
+
+📚 Gerçek Dünya Uygulamaları
+Bu yarışma, geleneksel derecelendirme sistemlerinin (ELO, Glicko) oyun içi veriye dayalı bir tahmin modeli ile nasıl desteklenebileceğini araştırmaktadır. Uygulama alanları:
+
+E-spor ve çevrim içi oyun platformlarında rekabetçi oyuncu sıralamaları
+
+Otomatik eşleştirme (matchmaking) sistemleri
+
+Yapay zekâ oyuncularının performans ölçümü

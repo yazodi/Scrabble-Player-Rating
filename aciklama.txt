@@ -1,0 +1,22 @@
+Model dosyasını buradan bulabilirsiniz : https://huggingface.co/yazodi/Scrabble-Player-Rating-model/upload/main
+model file : https://huggingface.co/yazodi/Scrabble-Player-Rating-model/upload/main
+
+# 📘 Proje: Scrabble Oyuncu Derecesi Tahmin Modeli – BecomePro Görevi
+
+## 📌 Proje Açıklaması (Türkçe)
+
+Bu proje, Kaggle üzerindeki "Scrabble Player Rating" yarışması kapsamında geliştirilmiş bir makine öğrenmesi uygulamasıdır. Amaç, bir Scrabble oyuncusunun yalnızca tek bir oyun performansına dayanarak oyun öncesi derecesini (rating) tahmin etmektir. Model, oyuncunun skor bilgisi, rakibinin durumu (bot/insan), kazanan bilgisini ve skor farkını kullanarak rating tahmini yapar.
+
+Kullanılan algoritma `RandomForestRegressor` olup, ortalama hata (RMSE) değeri ~215'tir. Veri temizliği, bot kontrolü ve özellik mühendisliği adımları uygulanmıştır. Sonuçta, model `.pkl` olarak kaydedilmiş ve kullanıcı arayüzü `Streamlit` ile geliştirilmiştir.
+
+veri analizi, modelleme, uygulama ve dağıtım becerilerini sergilemek amacıyla yapılmıştır.
+
+---
+
+## 📌 Project Description (English)
+
+This project is a machine learning application developed for the Kaggle competition “Scrabble Player Rating.” The objective is to predict a Scrabble player's pre-game rating based solely on a single match's performance data. The model uses features such as the player’s score, whether the opponent is a bot, the match outcome, and score difference.
+
+The algorithm used is `RandomForestRegressor`, with an average prediction error (RMSE) of approximately 215. The project involves data cleaning, bot flagging, and feature engineering. The final model is saved as `.pkl`, and an interactive prediction interface is built using `Streamlit`.
+
+This project was built as part of a BecomePro assignment to demonstrate data science, modeling, and deployment skills in a structured ML workflow.
